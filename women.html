@@ -9,6 +9,9 @@
         *{
             box-sizing: border-box;
         }
+        body{
+            margin: 20px 0px 0px 0px;
+        }
         #navbar{
             width: 100%;
             display: flex;
@@ -62,25 +65,19 @@
         #navbar2{
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             background-color: #525050;
             color: white;
-            padding: 0px 450px 0px 80px;
+            padding-left: 50px;
+            padding-right: 200px;
         }
         #navbar2 button{
             background-color: #525050;
             height: 50px;
             border: none;
             color: white;
-            position: relative;
-        }
-        #navbar2 button img{
-            display: none;
-            position: absolute;
-        }
-        #navbar2 button img:hover{
-            display:block;
+            margin-right: 20px;
         }
         #navbar2 button:hover{
             cursor: pointer;
@@ -236,9 +233,11 @@
     }else{
         LSdata=JSON.parse(LSdata);
     }
-    h2.innerText=LSdata[0].name;
-    navbar.append(h2);
+
+    // h2.innerText=LSdata[0].name;
+    // navbar.append(h2);
     // console.log(LSdata[0].name);
+    
     logo.addEventListener('click',function(){
         window.location.href = "home.html";
     })

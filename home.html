@@ -9,6 +9,9 @@
         *{
             box-sizing: border-box;
         }
+        body{
+            margin: 20px 0px 0px 0px;
+        }
         #navbar{
             width: 100%;
             display: flex;
@@ -62,25 +65,19 @@
         #navbar2{
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             background-color: #525050;
             color: white;
-            padding: 0px 450px 0px 80px;
+            padding-left: 50px;
+            padding-right: 200px;
         }
         #navbar2 button{
             background-color: #525050;
             height: 50px;
             border: none;
             color: white;
-            position: relative;
-        }
-        #navbar2 button img{
-            display: none;
-            position: absolute;
-        }
-        #navbar2 button img:hover{
-            display:block;
+            margin-right: 20px;
         }
         #navbar2 button:hover{
             cursor: pointer;
@@ -149,49 +146,24 @@
 </head>
 <body>
     <div id="navbar">
-        <!-- <img src="./TRADO.png" alt="error"> -->
         <h2>TRADO</h2>
         <a href="products.html">MEN</a>
         <a href="women.html">WOMEN</a>
         <a href="signin.html">Login / Register</a>
     </div>
     <div id="navbar2">
-        <button id="sale">Sale
-            <img src="./images/salediv.PNG" alt="error">
-        </button>
-        <button>New in
-            <img src="./images/New_in.PNG" alt="error">
-        </button>
-        <button>Clothing
-            <img src="./images/clothing.PNG" alt="error">
-        </button>
-        <button>Shoes
-            <img src="./images/Shoes.PNG" alt="error">
-        </button>
-        <button>Brand
-            <img src="./images/brands.PNG" alt="error">
-        </button>
-        <button>Accessories
-            <img src="./images/Accessceries.PNG" alt="error">
-        </button>
-        <button>Sportswear
-            <img src="./images/Sportswear.PNG" alt="error">
-        </button>
-        <button>Spring
-            <img src="./images/Spring.PNG" alt="error">
-        </button>
-        <button>Jeans
-            <img src="./images/jeans.PNG" alt="error">
-        </button>
-        <button>Topman
-            <img src="./images/topman.PNG" alt="error">
-        </button>
-        <button id="sale">Outlet
-            <img src="./images/outlet.PNG" alt="error">
-        </button>
-        <button >Marketplace
-            <img src="./images/market.PNG" alt="error">
-        </button>
+        <button id="sale">Sale</button>
+        <button>New in</button>
+        <button>Clothing</button>
+        <button>Shoes</button>
+        <button>Brand</button>
+        <button>Accessories</button>
+        <button>Sportswear</button>
+        <button>Spring</button>
+        <button>Jeans</button>
+        <button>Topman</button>
+        <button id="sale">Outlet</button>
+        <button >Marketplace</button>
     </div>
     <div id="navbar3">
         <button>WOMEN</button>
