@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #navbar{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2d2d2d;
+            color: white;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        #navbar img{
+            width: 50px;
+        }
+        #navbar h2{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #navbar a{
+            color: white;
+            /* height: 40px; */
+            text-decoration: none;
+        }
+        #navbar a:hover{
+            cursor: pointer;
+            color: #2d2d2d;
+            background-color: #eeeeee;
+        }
+        #navbar input{
+            width: 550px;
+            height: 40px;
+            text-align: center;
+            border-radius: 20px;
+        }
+        #navbar button{
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+        }
+        #navbar2> #sale{
+            background-color: #d01345;
+            width: 60px;
+            /* padding: 2px; */
+        }
+        #navbar2> #sale:hover{
+            cursor: pointer;
+            color: #2d2d2d;
+            background-color: #eeeeee;
+        }
+        #navbar button:hover{
+            background-color: rgb(251, 162, 207);
+        }
+        #navbar2{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #525050;
+            color: white;
+            padding: 0px 450px 0px 80px;
+        }
+        #navbar2 button{
+            background-color: #525050;
+            height: 50px;
+            border: none;
+            color: white;
+            position: relative;
+        }
+        #navbar2 button img{
+            display: none;
+            position: absolute;
+        }
+        #navbar2 button img:hover{
+            display:block;
+        }
+        #navbar2 button:hover{
+            cursor: pointer;
+            color: #2d2d2d;
+            background-color: #eeeeee;
+        }
+        #navbar3{
+            display: flex;
+            justify-content: space-between;
+            padding:2px 65px 2px 65px;
+            background-color:rgb(255 56 92) ;
+        }
+        #navbar3 button{
+            background-color:rgb(255 56 92) ;
+            width: 70px;
+        }
+        #navbar3 button:hover{
+            cursor: pointer;
+            color: #525050;
+        }
+        #bot1{
+            padding: 20px 40px 20px 20px;
+            margin: auto;
+            text-align: center;
+            background-color: #f97fa0;
+            font-family: futura-pt,FuturaStd,Helvetica,Arial,sans-serif;
+        }
+        #SALE{
+            width: 120px;
+            height: 40px;
+            background-color: #000000;
+            color: white;
+            border-radius: 20px;
+        }
+        #bot1 button,h1,h4:hover{
+            cursor: pointer;
+        }
+        #bot2{
+            width: 85%;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #bot2 img{
+            width: 100%;
+        }
+        #bot3{
+            width: 85%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #bot3 div{
+            width: 23%;
+            text-align: center;
+            font-family: futura-pt,FuturaStd,Helvetica,Arial,sans-serif;
+        }
+        #bot3 div img{
+            width: 100%;
+        }
+        #footer{
+            margin-top: 80px;
+            /* height: 100% */
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <!-- <img src="./TRADO.png" alt="error"> -->
+        <h2>TRADO</h2>
+        <a href="products.html">MEN</a>
+        <a href="women.html">WOMEN</a>
+        <a href="signin.html">Login / Register</a>
+    </div>
+    <div id="navbar2">
+        <button id="sale">Sale
+            <img src="./images/salediv.PNG" alt="error">
+        </button>
+        <button>New in
+            <img src="./images/New_in.PNG" alt="error">
+        </button>
+        <button>Clothing
+            <img src="./images/clothing.PNG" alt="error">
+        </button>
+        <button>Shoes
+            <img src="./images/Shoes.PNG" alt="error">
+        </button>
+        <button>Brand
+            <img src="./images/brands.PNG" alt="error">
+        </button>
+        <button>Accessories
+            <img src="./images/Accessceries.PNG" alt="error">
+        </button>
+        <button>Sportswear
+            <img src="./images/Sportswear.PNG" alt="error">
+        </button>
+        <button>Spring
+            <img src="./images/Spring.PNG" alt="error">
+        </button>
+        <button>Jeans
+            <img src="./images/jeans.PNG" alt="error">
+        </button>
+        <button>Topman
+            <img src="./images/topman.PNG" alt="error">
+        </button>
+        <button id="sale">Outlet
+            <img src="./images/outlet.PNG" alt="error">
+        </button>
+        <button >Marketplace
+            <img src="./images/market.PNG" alt="error">
+        </button>
+    </div>
+    <div id="navbar3">
+        <button>WOMEN</button>
+        <img src="./images/offer.PNG" alt="error">
+        <button>MEN</button>
+    </div>
+    <div id="bot1">
+        <button id="SALE">SALE</button>
+        <h1>UP TO 70% OFF THE SALE</h1>
+        <h4>It's a treat-yo'self day</h4>
+        <p>Limited time only. Selected styles marked down as shown</p>
+    </div>
+    <div id="bot2">
+        <img src="./images/TOPMAAN.PNG" alt="">
+    </div>
+    <div id="bot3">
+        <div>
+            <img src="./images/PUMA.avif" alt="error">
+            <h3>PUMA</h3>
+            <p>Purr-fect picks</p>
+        </div>
+        <div>
+            <img src="./images/SZNL SHORTS.avif" alt="error">
+            <h3>SZNIL SHORTS</h3>
+            <P>You Knee'd these</P>
+        </div>
+        <div>
+            <img src="./images/CASUAL SHIRTS.avif" alt="error">
+            <h3>CASUAL SHIRTS</h3>
+            <p>Prints came to play</p>
+        </div>
+        <div>
+            <img src="./images/SPRING SHOES.avif" alt="error">
+            <h3>SPRING SHOES</h3>
+            <P>Slido into the szn</P>
+        </div>
+    </div>
+    <div id="footer">
+        <img src="./images/footer.PNG" alt="error">
+    </div>
+</body>
+</html>
