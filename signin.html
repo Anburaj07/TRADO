@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin page</title>
+    <style>
+        *{
+            background-color: blanchedalmond;
+            box-sizing: border-box;
+        }
+        #container{
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            /* margin-top: -10px; */
+            background-color: white;
+            padding-bottom: 50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #container img{
+            width: 200px;    
+            /* border: 3px red solid;         */
+            /* margin:0px 0px 0px 20px */
+        }
+        /* #container div:nth-child(1) {
+            width: 80%;       
+            margin: auto;     
+            display: flex;
+            justify-content: space-around;
+        } */
+        #container div button{
+            width: 100px;
+            height: 30px;
+            margin-left: 20px;
+        }
+        form{
+            width: 60%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;     
+            background-color: white;       
+        }
+        form input,select{
+            margin-top: 30px;
+            height: 40px;
+            background-color: white;
+        }
+        #container div{
+            margin:40px 10px 0px 10px;
+            /* border: 3px red solid; */
+            background-color: white;
+            display: flex;
+            justify-content: space-around;
+        }
+        #container div a{
+            background-color: white;
+        }
+        #login form{
+            /* display: none;
+            position: relative; */
+        }
+        /* #join::{
+            
+        } */
+        #SIGNUP,#SIGNIN{
+            background-color:#2d2d2d;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./images/TRADO.png" alt="error">
+        <div>
+            <button id="join">JOIN</button>
+            <button id="signin">SIGN IN</button>
+        </div>
+        <div id="register">
+            <form id="joinForm" action="">
+                <input id="name" type="text" placeholder="Enter your name here">
+                <select name="Gender" id="gender">
+                    <option value="">select a gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <input id="email" type="email" placeholder="Enter E-mail Address">
+                    <input id="password" type="password" placeholder=" Enter your password">
+                    <input id="SIGNUP" type="submit" value="SIGNUP">
+                </select>
+            </form>
+        </div>
+        <div id="login">
+            <form id="Lform" action="">
+                <input id="Lemail" type="email" placeholder="Enter E-mail Address">
+                 <input id="Lpassword" type="password" placeholder=" Enter your password">
+                <input id="SIGNIN" type="submit" value="SIGNIN">
+            </form>
+        </div>
+        <div>
+        <a href="https://www.asos.com/privacy-policy/">Privacy Policy</a>
+        <a href="https://www.asos.com/terms-and-conditions/">Terms and conditions</a>
+        </div>
+    </div>
+</body>
+<script>
+    let name=document.getElementById('name');
+    let gender=document.getElementById('gender');
+    let email=document.getElementById('email');
+    let password=document.getElementById('password');
+    let form=document.querySelector('form');
+    let Lform=document.getElementById('Lform');
+    let Lemail=document.getElementById('Lemail');
+    let Lpassword=document.getElementById('Lpassword');
+    let join=document.getElementById('join');
+    let signin=document.getElementById('signin');
+
+    join.addEventListener('click',function(){
+        
+    })
+    signin.addEventListener('click',function(){
+        
+    })
+
+    let LSdata=localStorage.getItem('user-details');
+    if(LSdata===null){
+        LSdata=[];
+    }else{
+        LSdata=JSON.parse(LSdata);
+    }
+
+
+
+    form.addEventListener('submit',function(e){
+        // e.preventDefault();
+        if(name.value==="" || email.value==="" || password.value==="" || gender.value===""){
+            alert('Values can not be empty!!')
+        }else{
+            let obj={
+            name:name.value,
+            gender:gender.value,
+            email:email.value,
+            password:password.value,
+        };
+        LSdata.push(obj);
+        localStorage.setItem('user-details',JSON.stringify(LSdata));
+        alert('Registeration Successful!!');
+        }        
+    });
+
+    Lform.addEventListener('submit',function(e){
+        e.preventDefault();
+        if(check(LSdata)){
+            alert('LOGIN SUCCESSFULL!!');
+            window.location.href = "products.html";
+        }
+        else{
+            alert('Check Username or Password !!')
+        }
+
+        function check(LSdata){
+            for(let i=0;i<LSdata.length;i++){
+                // console.log(name.value,LSdata[i].name,'d')
+                if(Lemail.value=== LSdata[i].email && Lpassword.value===LSdata[i].password){
+                    return true;
+                }
+            }
+            return false;
+        }
+    })
+</script>
+</html>
