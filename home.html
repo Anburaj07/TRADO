@@ -181,7 +181,7 @@
     </div>
     <div id="bot3">
         <div>
-            <img src="./images/PUMA.avif" alt="error">
+            <img id="puma" src="./images/PUMA.avif" alt="error">
             <h3>PUMA</h3>
             <p>Purr-fect picks</p>
         </div>
@@ -205,4 +205,10 @@
         <img src="./images/footer.PNG" alt="error">
     </div>
 </body>
+<script>
+    let puma=document.getElementById('puma')
+    puma.addEventListener('click',function(){
+        window.location.href = "puma.html";
+    })
+</script>
 </html>
