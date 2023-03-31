@@ -12,52 +12,6 @@
       body {
         margin: 20px 0px 0px 0px;
       }
-      .select {
-        background-color: #eeeeee;
-        width: 100%;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        margin: auto;
-        justify-content: space-between;
-        padding: 10px 200px 10px 200px;
-      }
-      select {
-        width: 200px;
-        height: 50px;
-        text-align: center;
-        font: inherit;
-        background-color: #eeeeee;
-        border: none;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      }
-      select:hover {
-        cursor: pointer;
-      }
-      img {
-        cursor: pointer;
-      }
-      #container {
-        /* width: 95%; */
-        margin: auto;
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-        /* border: 1px red solid; */
-        padding: 40px;
-      }
-      .cart {
-        padding: 10px;
-        text-align: center;
-      }
-      .cart > div:nth-child(2) {
-        /* border: 1px rgb(48, 52, 44) solid; */
-        height: 100px;
-      }
-      .Cimg {
-        width: 100%;
-      }
       #navbar {
         width: 100%;
         display: flex;
@@ -116,8 +70,7 @@
         align-items: center;
         background-color: #525050;
         color: white;
-        padding-left: 50px;
-        padding-right: 200px;
+        padding: 0px 200px 0px 50px;
       }
       #navbar2 button {
         background-color: #525050;
@@ -134,21 +87,59 @@
       #navbar3 {
         display: flex;
         justify-content: space-between;
-        padding: 2px 65px 2px 65px;
+        padding: 0px 40px 0px 40px;
         background-color: #ff385c;
       }
       #navbar3 button {
         background-color: #d5a5ad;
         width: 70px;
+        height: 40px;
+        margin-top: 10px;
       }
       #navbar3 button:hover {
         cursor: pointer;
         color: #525050;
       }
+      #container {
+        width: 60%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+      }
+      #mightLike {
+        width: 60%;
+        margin: auto;
+        margin-top: 50px;
+      }
+      #mightLike img {
+        width: 100%;
+      }
+      #container div:nth-child(2) {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
       p {
         color: red;
         font-size: 20px;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .addcart {
+        width: 90%;
+        height: 45px;
+        margin-top: 10px;
+        margin-left: 12px;
+        background-color: #018849;
+        color: white;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .addcart:hover {
+        cursor: pointer;
+        background-color: #006637;
+        color: white;
       }
       #cartLogo {
         font-size: 40px;
@@ -184,106 +175,94 @@
       <img src="./images/offer.PNG" alt="error" />
       <button>MEN</button>
     </div>
-    <div>
-      <img src="./images/puma page.PNG" alt="error" />
-    </div>
-    <div class="select">
-      <select id="filter">
-        <option value="">Select a category</option>
-        <option value="t-shirt">T-shirt</option>
-        <option value="footwear">Footwear</option>
-        <option value="jeans">jeans</option>
-      </select>
-      <select id="sort">
-        <option value="">Sort by Price</option>
-        <option value="low">low to high</option>
-        <option value="high">high to low</option>
-      </select>
-    </div>
+
     <div id="container"></div>
+    <div id="mightLike">
+      <img src="./images/mightLike.PNG" alt="error" />
+    </div>
+
     <div id="footer">
       <img src="./images/footer.PNG" alt="error" />
     </div>
   </body>
   <script>
-    let API = "https://jsonserver-drqy.onrender.com/puma";
+    let productId = null;
+    const urlParams = new URLSearchParams(location.search);
+    // console.log(location.search);
+    for (const [key, value] of urlParams) {
+      if (key === "id") {
+        productId = value;
+      }
+    }
+    let API = `https://jsonserver-drqy.onrender.com/puma/${productId}`;
 
-    let fetchedData = [];
-    getData();
-    async function getData() {
+    getDetailsOfProduct();
+    async function getDetailsOfProduct() {
       try {
         let res = await fetch(API);
         let data = await res.json();
-        console.log("Data From backend", data);
-        display(data);
-        fetchedData = data;
+        // console.log("Detail of product", data);
+        display([data]); //Data in object format
       } catch (error) {
         console.log(error);
       }
     }
 
+    let LSData = localStorage.getItem("cart");
+    if (LSData === null) {
+      LSData = [];
+    } else {
+      LSData = JSON.parse(LSData);
+    }
+
+    let fetchedData = [];
+
     let container = document.getElementById("container");
 
-    function display(data) {
+    function display(product) {
       container.innerHTML = "";
 
-      data.forEach((el) => {
-        let cart = document.createElement("div");
-        cart.className = "cart";
+      product.forEach((el) => {
         let imgDiv = document.createElement("div");
         let textDiv = document.createElement("div");
         let img = document.createElement("img");
         img.className = "Cimg";
         let brand = document.createElement("h3");
         let price = document.createElement("p");
+        let addToCart = document.createElement("button");
+        addToCart.className = "addcart";
+        let bag_below = document.createElement("img");
 
         img.src = el.img;
         brand.innerText = el.brand;
         price.innerText = `$${el.price}`;
+        addToCart.innerText = "Add to Cart";
+        bag_below.src = "./images/bag_below.PNG";
 
-        img.addEventListener("click", function () {
-          window.location.href = `productDetails.html?id=${el.id}`;
-        });
-
-        imgDiv.append(img);
-        textDiv.append(brand, price);
-        cart.append(imgDiv, textDiv);
-        container.append(cart);
-      });
-    }
-
-    filter.addEventListener("change", function () {
-      if (filter.value === "") {
-        display(fetchedData);
-      } else {
-        let temp = fetchedData.filter((el) => {
-          if (el.category === filter.value) {
-            return true;
+        addToCart.addEventListener("click", function () {
+          if (checkAvail(el)) {
+            alert("Product Already in Cart");
           } else {
-            return false;
+            LSData.push({ ...el, quantity: 1 });
+            localStorage.setItem("cart", JSON.stringify(LSData));
+            alert("Product Added To Cart");
           }
         });
-        display(temp);
-      }
-    });
 
-    let sort = document.getElementById("sort");
+        function checkAvail(el) {
+          for (let i = 0; i < LSData.length; i++) {
+            if (el.id === LSData[i].id) {
+              return true;
+            }
+          }
+          return false;
+        }
 
-    sort.addEventListener("change", function () {
-      if (sort.value === "") {
-        display(fetchedData);
-      } else if (sort.value === "low") {
-        let temp = fetchedData.sort((a, b) => a.price - b.price);
-        display(temp);
-      } else {
-        let temp = fetchedData.sort((a, b) => b.price - a.price);
-        display(temp);
-      }
-    });
-
-    // let h2=document.createElement('h2');
-    // h2.innerText=LSdata[0].name;
-    // navbar.append(h2);
+        imgDiv.append(img);
+        textDiv.append(brand, price, addToCart, bag_below);
+        container.append(imgDiv, textDiv);
+      });
+    }
 
     let logo = document.getElementById("logo");
     logo.addEventListener("click", function () {

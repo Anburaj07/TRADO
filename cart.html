@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 20px 0px 0px 0px;
+        background-color: #eeeeee;
+      }
+      #navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #2d2d2d;
+        color: white;
+        padding-left: 80px;
+        padding-right: 80px;
+      }
+      #navbar img {
+        width: 50px;
+      }
+      #navbar h2 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      #navbar a {
+        color: white;
+        /* height: 40px; */
+        text-decoration: none;
+      }
+      #navbar a:hover {
+        cursor: pointer;
+        color: #2d2d2d;
+        background-color: #eeeeee;
+      }
+      #navbar input {
+        width: 550px;
+        height: 40px;
+        text-align: center;
+        border-radius: 20px;
+      }
+      #navbar button {
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+      }
+      #navbar2 > #sale {
+        background-color: #d01345;
+        width: 60px;
+        /* padding: 2px; */
+      }
+      #navbar2 > #sale:hover {
+        cursor: pointer;
+        color: #2d2d2d;
+        background-color: #eeeeee;
+      }
+      #navbar button:hover {
+        background-color: rgb(251, 162, 207);
+      }
+      #navbar2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #525050;
+        color: white;
+        padding: 0px 200px 0px 50px;
+      }
+      #navbar2 button {
+        background-color: #525050;
+        height: 50px;
+        border: none;
+        color: white;
+        margin-right: 20px;
+      }
+      #navbar2 button:hover {
+        cursor: pointer;
+        color: #2d2d2d;
+        background-color: #eeeeee;
+      }
+      #navbar3 {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 40px 0px 40px;
+        background-color: #ff385c;
+      }
+      #navbar3 button {
+        background-color: #d5a5ad;
+        width: 70px;
+        height: 40px;
+        margin-top: 10px;
+      }
+      #navbar3 button:hover {
+        cursor: pointer;
+        color: #525050;
+      }
+      p {
+        color: red;
+        font-size: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      #cartLogo {
+        font-size: 40px;
+      }
+      #footer {
+        margin-top: 80px;
+      }
+      #container {
+        /* border: 3px solid rgb(162, 29, 199); */
+        width: 100%;
+        margin-top: 10px;
+        /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+        /* background-color: white; */
+      }
+      #container img {
+        width: 100%;
+      }
+      #container2 {
+        /* border: 3px solid blue; */
+        width: 100%;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: white;
+      }
+      .cart {
+        display: flex;
+        justify-content: space-around;
+        /* border: 3px solid rgb(11, 80, 36); */
+        padding: 20px;
+      }
+      .Cimg {
+        width: 30%;
+        /* border: 2px solid rgb(121, 190, 37); */
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      .remove {
+        /* margin-left: 10px; */
+        border-radius: 2px;
+        border-color: white;
+        background-color: white;
+        color: black;
+      }
+      .remove:hover {
+        background-color: rgb(119, 2, 4);
+        color: white;
+      }
+      .payDetails {
+        width: 70%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #bottom {
+        width: 65%;
+        margin: auto;
+        display: flex;
+        /* border: 2px solid rgb(121, 190, 37); */
+        justify-content: space-between;
+      }
+      #spl {
+        width: 60%;
+        /* border: 2px solid rgb(55, 58, 53); */
+        /* border: 2px solid rgb(37, 37, 36); */
+      }
+      #payment {
+        width: 38%;
+        height: 40%;
+        padding: 15px;
+        /* border: 2px solid rgb(55, 58, 53); */
+        background-color: white;
+        text-align: justify;
+        margin-top: 10px;
+      }
+      .amount {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      #checkout {
+        width: 100%;
+        height: 45px;
+        margin-top: 10px;
+        background-color: #018849;
+        color: white;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+      }
+      #checkout:hover {
+        background-color: #006637;
+      }
+      #cart-total {
+        margin-left: 160px;
+      }
+      #Delivery {
+        margin-left: 100px;
+      }
+      #payImg {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h2 id="logo">TRADO</h2>
+      <a href="products.html">MEN</a>
+      <a href="women.html">WOMEN</a>
+      <a id="cartLogo" href="cart.html">🛒</a>
+    </div>
+    <div id="navbar2">
+      <button id="sale">Sale</button>
+      <button>New in</button>
+      <button>Clothing</button>
+      <button>Shoes</button>
+      <button>Brand</button>
+      <button>Accessories</button>
+      <button>Sportswear</button>
+      <button>Spring</button>
+      <button>Jeans</button>
+      <button>Topman</button>
+      <button id="sale">Outlet</button>
+      <button>Marketplace</button>
+    </div>
+    <div id="navbar3">
+      <button>WOMEN</button>
+      <img src="./images/offer.PNG" alt="error" />
+      <button>MEN</button>
+    </div>
+    <div>
+      <img src="./images/temp.PNG" alt="" />
+    </div>
+    <div id="bottom">
+      <div id="spl">
+        <div id="container">
+          <img src="./images/bag.PNG" alt="error" />
+        </div>
+        <div id="container2"></div>
+      </div>
+      <div id="payment">
+        <h2>TOTAL</h2>
+        <div class="amount">
+          <h3 id="total">Sub-total<span id="cart-total">0</span></h3>
+          <h3 id="total">Delivery charege <span id="Delivery">0</span></h3>
+        </div>
+        <button id="checkout">CHECKOUT</button>
+        <img id="payImg" src="./images/payment.PNG" alt="error" />
+      </div>
+    </div>
+    <div id="footer">
+      <img src="./images/footer.PNG" alt="error" />
+    </div>
+  </body>
+  <script>
+    // let cartTotal = document.getElementById("cart-total");
+
+    let container2 = document.getElementById("container2");
+    let payment = document.getElementById("payment");
+
+    let LSData = localStorage.getItem("cart");
+    if (LSData === null) {
+      LSData = [];
+    } else {
+      LSData = JSON.parse(LSData);
+    }
+    display(LSData);
+
+    function display(data) {
+      container2.innerHTML = "";
+      //   console.log(data);
+
+      data.forEach((el) => {
+        let cart = document.createElement("div");
+        cart.className = "cart";
+        // let imgDiv = document.createElement("div");
+        // imgDiv.className = "imgDiv";
+        let textDiv = document.createElement("div");
+        textDiv.className = "textDiv ";
+        let img = document.createElement("img");
+        img.className = "Cimg";
+        let brand = document.createElement("h3");
+        let price = document.createElement("p");
+        let paydetails = document.createElement("div");
+        paydetails.className = "payDetails";
+        let increment = document.createElement("button");
+        let quantity = document.createElement("span");
+        let decrement = document.createElement("button");
+        let remove = document.createElement("button");
+        remove.className = "remove";
+
+        img.src = el.img;
+        brand.innerText = el.brand;
+        price.innerText = `$${el.price}`;
+        increment.innerText = "+";
+        quantity.innerText = el.quantity;
+        decrement.innerText = "-";
+        remove.innerText = "Remove";
+
+        increment.addEventListener("click", function () {
+          el.quantity++;
+          localStorage.setItem("cart", JSON.stringify(LSData));
+          display(LSData);
+        });
+
+        decrement.addEventListener("click", function () {
+          if (el.quantity > 1) {
+            el.quantity--;
+            localStorage.setItem("cart", JSON.stringify(LSData));
+            display(LSData);
+          }
+        });
+
+        remove.addEventListener("click", function () {
+          LSData = LSData.filter((ele) => {
+            return ele.id != el.id;
+          });
+          localStorage.setItem("cart", JSON.stringify(LSData));
+          display(LSData);
+        });
+
+        // imgDiv.append(bag_img,img);
+        paydetails.append(increment, quantity, decrement, remove);
+        textDiv.append(brand, price, paydetails);
+        cart.append(img, textDiv);
+        container2.append(cart);
+      });
+
+      let cartTotal = document.getElementById("cart-total");
+      let Delivery = document.getElementById("Delivery");
+      let sum = 0;
+      for (let i = 0; i < LSData.length; i++) {
+        sum += LSData[i].quantity * LSData[i].price;
+      }
+      cartTotal.innerText = `$${sum}`;
+      Delivery.innerText = `$${7.0}`;
+      //   payment.append(cartTotal);
+    }
+
+    let logo = document.getElementById("logo");
+    logo.addEventListener("click", function () {
+      window.location.href = "home.html";
+    });
+  </script>
+</html>
