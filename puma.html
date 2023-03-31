@@ -235,10 +235,13 @@
         let img = document.createElement("img");
         img.className = "Cimg";
         let brand = document.createElement("h3");
+        let salePrice = document.createElement("h3");
         let price = document.createElement("p");
 
         img.src = el.img;
         brand.innerText = el.brand;
+        salePrice.innerText="Sale Price!!";
+        salePrice.style.color="rgb(49, 74, 172)"
         price.innerText = `$${el.price}`;
 
         img.addEventListener("click", function () {
@@ -246,7 +249,7 @@
         });
 
         imgDiv.append(img);
-        textDiv.append(brand, price);
+        textDiv.append(brand,salePrice,price);
         cart.append(imgDiv, textDiv);
         container.append(cart);
       });

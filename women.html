@@ -182,9 +182,9 @@
         <button >Marketplace</button>
     </div>
     <div id="navbar3">
-        <button>WOMEN</button>
+        <button id="women">WOMEN</button>
         <img src="./images/offer.PNG" alt="error">
-        <button>MEN</button>
+        <button id="men">MEN</button>
     </div>
     <div id="bot1">
         <button id="SALE">SALE</button>
@@ -242,6 +242,15 @@
     // navbar.append(h2);
     // console.log(LSdata[0].name);
     
+    let women=document.getElementById('women');
+    women.addEventListener('click',function(){
+        window.location.href = "women.html";
+    })
+    let men=document.getElementById('men');
+    men.addEventListener('click',function(){
+        window.location.href = "products.html";
+    })
+
     logo.addEventListener('click',function(){
         window.location.href = "home.html";
     })
