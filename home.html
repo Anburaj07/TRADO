@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         *{
             box-sizing: border-box;
@@ -20,7 +21,7 @@
             background-color: #2d2d2d;
             color: white;
             padding-left: 80px;
-            padding-right: 80px;
+            padding-right: 40px;
         }
         #navbar img{
             width: 50px;
@@ -138,6 +139,14 @@
         #bot3 div img{
             width: 100%;
         }
+        #trending{
+            padding-left: 80px;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+        #trending img{
+            width: 90%;
+        }
         #footer{
             margin-top: 80px;
             /* height: 100% */
@@ -148,8 +157,12 @@
     <div id="navbar">
         <h2>TRADO</h2>
         <a href="products.html">MEN</a>
-        <a href="women.html">WOMEN</a>
-        <a href="signin.html">Login / Register</a>
+        <a href="women.html">WOMEN</a>     
+        <div>
+        <i id class="fa fa-user icon"></i>   
+        <a href="signin.html">Login/Register</a>
+        </div>
+        <!-- Login / Register -->
     </div>
     <div id="navbar2">
         <button id="sale">Sale</button>
@@ -166,9 +179,9 @@
         <button >Marketplace</button>
     </div>
     <div id="navbar3">
-        <button>WOMEN</button>
+        <button id="women">WOMEN</button>
         <img src="./images/offer.PNG" alt="error">
-        <button>MEN</button>
+        <button id="men">MEN</button>
     </div>
     <div id="bot1">
         <button id="SALE">SALE</button>
@@ -201,11 +214,22 @@
             <P>Slido into the szn</P>
         </div>
     </div>
+    <div id="trending">
+        <img src="./images/trendingBrands.PNG" alt="error">
+    </div>
     <div id="footer">
         <img src="./images/footer.PNG" alt="error">
     </div>
 </body>
 <script>
+    let women=document.getElementById('women');
+    women.addEventListener('click',function(){
+        window.location.href = "women.html";
+    })
+    let men=document.getElementById('men');
+    men.addEventListener('click',function(){
+        window.location.href = "products.html";
+    })
     let puma=document.getElementById('puma')
     puma.addEventListener('click',function(){
         window.location.href = "puma.html";

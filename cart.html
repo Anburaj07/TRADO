@@ -200,7 +200,10 @@
         margin-left: 160px;
       }
       #Delivery {
-        margin-left: 100px;
+        margin-left: 170px;
+      }
+      #Delivery:hover{
+        cursor: pointer;
       }
       #payImg {
         margin-top: 20px;
@@ -247,7 +250,7 @@
         <h2>TOTAL</h2>
         <div class="amount">
           <h3 id="total">Sub-total<span id="cart-total">0</span></h3>
-          <h3 id="total">Delivery charege <span id="Delivery">0</span></h3>
+          <h3 id="total">Delivery <span id="Delivery">ⓘ</span></h3>
         </div>
         <button id="checkout">CHECKOUT</button>
         <img id="payImg" src="./images/payment.PNG" alt="error" />
@@ -270,12 +273,13 @@
       LSData = JSON.parse(LSData);
     }
     display(LSData);
-
+    // console.log(LSData);
     function display(data) {
       container2.innerHTML = "";
-      //   console.log(data);
+        // console.log(data);
 
       data.forEach((el) => {
+        console.log(el);
         let cart = document.createElement("div");
         cart.className = "cart";
         // let imgDiv = document.createElement("div");
@@ -332,13 +336,13 @@
       });
 
       let cartTotal = document.getElementById("cart-total");
-      let Delivery = document.getElementById("Delivery");
+      // let Delivery = document.getElementById("Delivery");
       let sum = 0;
       for (let i = 0; i < LSData.length; i++) {
         sum += LSData[i].quantity * LSData[i].price;
       }
       cartTotal.innerText = `$${sum}`;
-      Delivery.innerText = `$${7.0}`;
+      // Delivery.innerText = `$${7.0}`;
       //   payment.append(cartTotal);
     }
 
@@ -346,5 +350,9 @@
     logo.addEventListener("click", function () {
       window.location.href = "home.html";
     });
+    let checkout=document.getElementById('checkout');
+    checkout.addEventListener('click',function(){
+      window.location.href="checkout.html";
+    })
   </script>
 </html>
