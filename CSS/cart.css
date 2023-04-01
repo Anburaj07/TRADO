@@ -123,13 +123,16 @@
   }
   .cart {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     /* border: 3px solid rgb(11, 80, 36); */
     padding: 20px;
   }
   .Cimg {
     width: 30%;
     /* border: 2px solid rgb(121, 190, 37); */
+  }
+  .textDiv{
+    width: 65%;
   }
   button:hover {
     cursor: pointer;

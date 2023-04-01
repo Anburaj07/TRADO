@@ -22,7 +22,6 @@ body{
 }
 #navbar a{
     color: white;
-    /* height: 40px; */
     text-decoration: none;
 }
 #navbar a:hover{
@@ -44,7 +43,6 @@ body{
 #navbar2> #sale{
     background-color: #d01345;
     width: 60px;
-    /* padding: 2px; */
 }
 #navbar2> #sale:hover{
     cursor: pointer;
@@ -95,7 +93,6 @@ body{
     margin: auto;
     text-align: center;
     background-color: #e2a0b2;
-    /* flexible-banner-background-gradient: linear-gradient(90deg, #26E066 0%, #F799BA 100%); */
     font-family: futura-pt,FuturaStd,Helvetica,Arial,sans-serif;
 }
 #SALE{

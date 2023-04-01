@@ -26,6 +26,15 @@
   select:hover {
     cursor: pointer;
   }
+  #search{
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: #eeeeee;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
   img {
     cursor: pointer;
   }
@@ -36,7 +45,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    /* border: 1px red solid; */
     padding: 40px;
   }
   .cart {
@@ -44,7 +52,6 @@
     text-align: center;
   }
   .cart > div:nth-child(2) {
-    /* border: 1px rgb(48, 52, 44) solid; */
     height: 100px;
   }
   .Cimg {
@@ -69,7 +76,6 @@
   }
   #navbar a {
     color: white;
-    /* height: 40px; */
     text-decoration: none;
   }
   #navbar a:hover {
@@ -91,7 +97,6 @@
   #navbar2 > #sale {
     background-color: #d01345;
     width: 60px;
-    /* padding: 2px; */
   }
   #navbar2 > #sale:hover {
     cursor: pointer;
@@ -126,7 +131,7 @@
   #navbar3 {
     display: flex;
     justify-content: space-between;
-    padding: 2px 65px 2px 65px;
+    padding: 2px 75px 2px 75px;
     background-color: #ff385c;
   }
   #navbar3 button {
@@ -136,7 +141,7 @@
   #navbar3 button:hover {
     cursor: pointer;
     color: #525050;
-  }
+  }  
   p {
     color: red;
     font-size: 20px;
