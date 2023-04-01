@@ -153,6 +153,11 @@
         }
       });
       display(searchedValue);
+    });    
+
+    let logo = document.getElementById("logo");
+    logo.addEventListener("click", function () {
+      window.location.href = "home.html";
     });
 
     let h2 = document.createElement("h2");
@@ -165,10 +170,6 @@
     let n = LSdata.length - 1;
     h2.innerText = LSdata[n].name;
     navbar.append(h2);
-
-    let logo = document.getElementById("logo");
-    logo.addEventListener("click", function () {
-      window.location.href = "home.html";
-    });
+    
   </script>
 </html>

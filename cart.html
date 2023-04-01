@@ -138,6 +138,15 @@
       }
       cartTotal.innerText = `$${sum}`;
     }
+   
+    let logo = document.getElementById("logo");
+    logo.addEventListener("click", function () {
+      window.location.href = "home.html";
+    });
+    let checkout = document.getElementById("checkout");
+    checkout.addEventListener("click", function () {
+      window.location.href = "checkout.html";
+    });
 
     let h2 = document.createElement("h2");
     let LSdata = localStorage.getItem("user-details");
@@ -149,14 +158,6 @@
     let n = LSdata.length - 1;
     h2.innerText = LSdata[n].name;
     navbar.append(h2);
-
-    let logo = document.getElementById("logo");
-    logo.addEventListener("click", function () {
-      window.location.href = "home.html";
-    });
-    let checkout = document.getElementById("checkout");
-    checkout.addEventListener("click", function () {
-      window.location.href = "checkout.html";
-    });
+    
   </script>
 </html>
