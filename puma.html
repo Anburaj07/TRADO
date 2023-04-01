@@ -103,12 +103,12 @@ function display(data) {
     container.append(cart);
   });
 }
-
+let temp=null;
 filter.addEventListener("change", function () {
   if (filter.value === "") {
     display(fetchedData);
   } else {
-    let temp = fetchedData.filter((el) => {
+     temp = fetchedData.filter((el) => {
       if (el.category === filter.value) {
         return true;
       } else {
@@ -122,14 +122,16 @@ filter.addEventListener("change", function () {
 let sort = document.getElementById("sort");
 
 sort.addEventListener("change", function () {
-  if (sort.value === "") {
+  if(temp==="" && sort.value === ""){
     display(fetchedData);
+  }else if (sort.value === "") {
+    display(temp);
   } else if (sort.value === "low") {
-    let temp = fetchedData.sort((a, b) => a.price - b.price);
+    let tempSort = temp.sort((a, b) => a.price - b.price);
     display(temp);
   } else {
-    let temp = fetchedData.sort((a, b) => b.price - a.price);
-    display(temp);
+    let tempSort = temp.sort((a, b) => b.price - a.price);
+    display(tempSort);
   }
 });
 
