@@ -77,17 +77,7 @@
     let utility = document.getElementById("utility");
     let formal = document.getElementById("formal");
     let modest = document.getElementById("modest");
-    let shoes = document.getElementById("shoes");
-
-    let LSdata = localStorage.getItem("user-details");
-    if (LSdata === null) {
-      LSdata = [];
-    } else {
-      LSdata = JSON.parse(LSdata);
-    }
-    let n = LSdata.length - 1;
-    h2.innerText = LSdata[n].name;
-    navbar.append(h2);
+    let shoes = document.getElementById("shoes");    
 
     let women = document.getElementById("women");
     women.addEventListener("click", function () {
@@ -101,5 +91,16 @@
     logo.addEventListener("click", function () {
       window.location.href = "home.html";
     });
+
+    let LSdata = localStorage.getItem("user-details");
+    if (LSdata === null) {
+      LSdata = [];
+    } else {
+      LSdata = JSON.parse(LSdata);
+    }
+    let n = LSdata.length - 1;
+    h2.innerText = LSdata[n].name;
+    navbar.append(h2);
+
   </script>
 </html>
