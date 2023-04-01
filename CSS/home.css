@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 20px 0px 0px 0px;
+}
+#navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2d2d;
+    color: white;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+#navbar img{
+    width: 50px;
+}
+#navbar h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#navbar a{
+    color: white;
+    /* height: 40px; */
+    text-decoration: none;
+}
+#navbar a:hover{
+    cursor: pointer;
+    color: #2d2d2d;
+    background-color: #eeeeee;
+}
+#navbar input{
+    width: 550px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+}
+#navbar button{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+}
+#navbar2> #sale{
+    background-color: #d01345;
+    width: 60px;
+    /* padding: 2px; */
+}
+#navbar2> #sale:hover{
+    cursor: pointer;
+    color: #2d2d2d;
+    background-color: #eeeeee;
+}
+#navbar button:hover{
+    background-color: rgb(251, 162, 207);
+}
+#navbar2{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #525050;
+    color: white;
+    padding-left: 50px;
+    padding-right: 200px;
+}
+#navbar2 button{
+    background-color: #525050;
+    height: 50px;
+    border: none;
+    color: white;
+    margin-right: 20px;
+}
+#navbar2 button:hover{
+    cursor: pointer;
+    color: #2d2d2d;
+    background-color: #eeeeee;
+}
+#navbar3{
+    display: flex;
+    justify-content: space-between;
+    padding:2px 65px 2px 65px;
+    background-color:rgb(255 56 92) ;
+}
+#navbar3 button{
+    background-color:rgb(255 56 92) ;
+    width: 70px;
+}
+#navbar3 button:hover{
+    cursor: pointer;
+    color: #525050;
+}
+#bot1{
+    padding: 20px 40px 20px 20px;
+    margin: auto;
+    text-align: center;
+    background-color: #f97fa0;
+    font-family: futura-pt,FuturaStd,Helvetica,Arial,sans-serif;
+}
+#SALE{
+    width: 120px;
+    height: 40px;
+    background-color: #000000;
+    color: white;
+    border-radius: 20px;
+}
+#bot1 button,h1,h4:hover{
+    cursor: pointer;
+}
+#bot2{
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+}
+#bot2 img{
+    width: 100%;
+}
+#bot3{
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#bot3 div{
+    width: 23%;
+    text-align: center;
+    font-family: futura-pt,FuturaStd,Helvetica,Arial,sans-serif;
+}
+#bot3 div img{
+    width: 100%;
+}
+#trending{
+    padding-left: 80px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+#trending img{
+    width: 90%;
+}
+#footer{
+    margin-top: 80px;
+    /* height: 100% */
+}

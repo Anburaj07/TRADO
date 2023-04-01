@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: blanchedalmond;
+  }
+  #container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    /* margin-top: -10px; */
+    background-color: white;
+    padding-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #container > div > img {
+    width: 200px;
+    margin: 20px 0px 20px 20px;
+  }
+  #register {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #login {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  #join {
+    width: 150px;
+    height: 30px;
+    background-color: blanchedalmond;
+  }
+  #signin {
+    width: 150px;
+    height: 30px;
+    background-color: blanchedalmond;
+  }
+  form {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  form > input,
+  select {
+    margin-top: 30px;
+    height: 40px;
+    background-color: white;
+  }
+  #link {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }

@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 20px 0px 0px 0px;
+  }
+  .select {
+    background-color: #eeeeee;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    padding: 10px 200px 10px 200px;
+  }
+  select {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font: inherit;
+    background-color: #eeeeee;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  select:hover {
+    cursor: pointer;
+  }
+  img {
+    cursor: pointer;
+  }
+  #container {
+    /* width: 95%; */
+    margin: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* border: 1px red solid; */
+    padding: 40px;
+  }
+  .cart {
+    padding: 10px;
+    text-align: center;
+  }
+  .cart > div:nth-child(2) {
+    /* border: 1px rgb(48, 52, 44) solid; */
+    height: 100px;
+  }
+  .Cimg {
+    width: 100%;
+  }
+  #navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2d2d;
+    color: white;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  #navbar img {
+    width: 50px;
+  }
+  #navbar h2 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  #navbar a {
+    color: white;
+    /* height: 40px; */
+    text-decoration: none;
+  }
+  #navbar a:hover {
+    cursor: pointer;
+    color: #2d2d2d;
+    background-color: #eeeeee;
+  }
+  #navbar input {
+    width: 550px;
+    height: 40px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  #navbar button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+  }
+  #navbar2 > #sale {
+    background-color: #d01345;
+    width: 60px;
+    /* padding: 2px; */
+  }
+  #navbar2 > #sale:hover {
+    cursor: pointer;
+    color: #2d2d2d;
+    background-color: #eeeeee;
+  }
+  #navbar button:hover {
+    background-color: rgb(251, 162, 207);
+  }
+  #navbar2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #525050;
+    color: white;
+    padding-left: 50px;
+    padding-right: 200px;
+  }
+  #navbar2 button {
+    background-color: #525050;
+    height: 50px;
+    border: none;
+    color: white;
+    margin-right: 20px;
+  }
+  #navbar2 button:hover {
+    cursor: pointer;
+    color: #2d2d2d;
+    background-color: #eeeeee;
+  }
+  #navbar3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 65px 2px 65px;
+    background-color: #ff385c;
+  }
+  #navbar3 button {
+    background-color: #d5a5ad;
+    width: 70px;
+  }
+  #navbar3 button:hover {
+    cursor: pointer;
+    color: #525050;
+  }
+  p {
+    color: red;
+    font-size: 20px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  #cartLogo {
+    font-size: 40px;
+  }
+  #footer {
+    margin-top: 80px;
+  }
