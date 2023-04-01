@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puma Details</title>
-    <link rel="stylesheet" type="text/css" href="./CSS/productDetails.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/productDetails.css" />
   </head>
   <body>
     <div id="navbar">
@@ -94,8 +94,8 @@
 
         img.src = el.img;
         brand.innerText = el.brand;
-        salePrice.innerText="Sale Price";
-        salePrice.style.color="rgb(49, 74, 172)"
+        salePrice.innerText = "Sale Price";
+        salePrice.style.color = "rgb(49, 74, 172)";
         price.innerText = `$${el.price}`;
         addToCart.innerText = "Add to Cart";
         bag_below.src = "./images/bag_below.PNG";
@@ -120,18 +120,29 @@
         }
 
         imgDiv.append(img);
-        textDiv.append(brand,salePrice, price, addToCart, bag_below);
+        textDiv.append(brand, salePrice, price, addToCart, bag_below);
         container.append(imgDiv, textDiv);
       });
     }
-    let women=document.getElementById('women');
-    women.addEventListener('click',function(){
-        window.location.href = "women.html";
-    })
-    let men=document.getElementById('men');
-    men.addEventListener('click',function(){
-        window.location.href = "products.html";
-    })
+    let women = document.getElementById("women");
+    women.addEventListener("click", function () {
+      window.location.href = "women.html";
+    });
+    let men = document.getElementById("men");
+    men.addEventListener("click", function () {
+      window.location.href = "products.html";
+    });
+
+    let h2 = document.createElement("h2");
+    let LSdata = localStorage.getItem("user-details");
+    if (LSdata === null) {
+      LSdata = [];
+    } else {
+      LSdata = JSON.parse(LSdata);
+    }
+    let n = LSdata.length - 1;
+    h2.innerText = LSdata[n].name;
+    navbar.append(h2);
 
     let logo = document.getElementById("logo");
     logo.addEventListener("click", function () {

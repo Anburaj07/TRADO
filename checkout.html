@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>checkout</title>
-    <link rel="stylesheet" type="text/css" href="./CSS/checkout.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/checkout.css" />
   </head>
   <body>
     <div class="navbar">
@@ -114,7 +114,7 @@
             <h3 id="totalToPay"></h3>
           </div>
         </div>
-        <img src="./images/indiaDel.PNG" alt="error">
+        <img src="./images/indiaDel.PNG" alt="error" />
       </div>
     </div>
     <div id="footer">
@@ -187,22 +187,21 @@
       totalItems.className = "totalItems";
       let Items = document.createElement("h1");
 
-      totalItems.innerText = `${LSData.length }`;
+      totalItems.innerText = `${LSData.length}`;
       Items.innerText = "ITEMS";
       R1.append(totalItems, Items);
 
       let cartTotal = document.getElementById("Subtotal");
-      // let Delivery = document.getElementById("Delivery");
       let sum = 0;
       for (let i = 0; i < LSData.length; i++) {
         sum += LSData[i].quantity * LSData[i].price;
       }
       cartTotal.innerText = `$${sum}`;
-      let Delivery=document.getElementById('Delivery');
-      Delivery.innerText = `$${7.00}`;
+      let Delivery = document.getElementById("Delivery");
+      Delivery.innerText = `$${7.0}`;
 
-      let totalToPay=document.getElementById('totalToPay');
-      totalToPay.innerText=`$${sum+7.00}`;
+      let totalToPay = document.getElementById("totalToPay");
+      totalToPay.innerText = `$${sum + 7.0}`;
       //   payment.append(cartTotal);
     }
   </script>
