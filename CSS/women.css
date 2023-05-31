@@ -2,55 +2,33 @@
     box-sizing: border-box;
 }
 body{
-    margin: 20px 0px 0px 0px;
+    margin:0px;
+    padding: 0px;
+}
+nav{
+    width:100%;
 }
 #navbar{
-    width: 100%;
+    margin: auto; 
+    background-color: #2d2d2d;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2d2d2d;
-    color: white;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 10%;
+    padding-right: 10%;    
 }
-#navbar img{
-    width: 50px;
-}
-#navbar h2{
+h2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-#navbar a{
+a{
     color: white;
     text-decoration: none;
 }
-#navbar a:hover{
+a:hover{
     cursor: pointer;
     color: #2d2d2d;
     background-color: #eeeeee;
-}
-#navbar input{
-    width: 550px;
-    height: 40px;
-    text-align: center;
-    border-radius: 20px;
-}
-#navbar button{
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-}
-#navbar2> #sale{
-    background-color: #d01345;
-    width: 60px;
-}
-#navbar2> #sale:hover{
-    cursor: pointer;
-    color: #2d2d2d;
-    background-color: #eeeeee;
-}
-#navbar button:hover{
-    background-color: rgb(251, 162, 207);
 }
 #navbar2{
     width: 100%;
@@ -59,40 +37,48 @@ body{
     align-items: center;
     background-color: #525050;
     color: white;
-    padding-left: 50px;
-    padding-right: 200px;
+    padding-left: 10%;
+    padding-right:10%;   
 }
 #navbar2 button{
     background-color: #525050;
     height: 50px;
     border: none;
     color: white;
-    margin-right: 20px;
+    width: 10%;
 }
 #navbar2 button:hover{
     cursor: pointer;
     color: #2d2d2d;
-    background-color: #eeeeee;
+    background-color: #eeeeee;   
 }
 #navbar3{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding:2px 65px 2px 65px;
-    background-color:#fb6d8f ;
+    padding:1% 5% 1% 5%;
+    background-color:rgb(255 56 92) ;
+}
+#navbar3 img{
+    width: 100%;
 }
 #navbar3 button{
-    background-color:#d5a5ad ;
+    background-color:rgb(255 56 92) ;
     width: 70px;
+    border: none;
+    font-size:medium
 }
 #navbar3 button:hover{
     cursor: pointer;
     color: #525050;
+    background-color: #eeeeee;
 }
+
 #bot1{
-    padding: 20px 40px 20px 20px;
+    padding: 2% 3% 2% 2%;
     margin: auto;
     text-align: center;
-    background-color: #e2a0b2;
+    background-color: #f97fa0;
     font-family: futura-pt,FuturaStd,Helvetica,Arial,sans-serif;
 }
 #SALE{
@@ -102,23 +88,29 @@ body{
     color: white;
     border-radius: 20px;
 }
-#bot1 button,h1,h4:hover{
+#bot1 button:hover{
     cursor: pointer;
+    color: black;
+    background-color: #eeeeee;
 }
-#bot2{
-    width: 85%;
-    margin: auto;
-    margin-top: 20px;
-}
-#bot2 img{
-    width: 100%;
-}
-#bot3{
+#bot4{
     width: 85%;
     margin: auto;
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
+}
+#bot4 img{
+    width: 100%;
+}
+#bot3{
+    width: 85%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 }
 #bot3 div{
     width: 23%;
@@ -132,18 +124,31 @@ body{
     cursor: pointer;
     color: blue;
 }
-#bot4{
-    width: 85%;
-    margin: auto;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-}
 #footer{
-    margin-top: 80px;
-    /* height: 100% */
+    margin-top: 3%
 }
-#cart{
-    font-size: 40px;
+#footer img{
+    width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    #navbar .a{
+        display: none;
+    }
+    #navbar{
+        justify-content:space-between;
+    }
+    #bot3{
+        display: flex;
+        flex-direction: column;
+    }
+    #bot3 div{
+        width:80%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 660px) {
+    #navbar2{
+        display: none;
+    }
 }

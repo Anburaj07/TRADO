@@ -2,6 +2,8 @@
     box-sizing: border-box;
   }
   body {
+    margin: 0px;
+    padding: 0px;
     background-color: blanchedalmond;
   }
   #container {
@@ -9,35 +11,57 @@
     margin: auto;
     text-align: center;
     background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding-bottom: 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
-  #container > div > img {
-    width: 200px;
-    margin: 20px 0px 20px 20px;
+   img{
+    margin: auto;
+    margin-top: 10px;
+    width: 25%;
   }
   #register {
     width: 60%;
     margin: auto;
-    padding: 20px;
+    padding: 5%;
+    margin-top: 2%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10%;
   }
   #login {
     width: 60%;
     margin: auto;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 7%;
+    margin-top: 2%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10%;
   }
   #join {
-    width: 150px;
-    height: 30px;
+    width: 34%;
+    padding: 2%;
     background-color: blanchedalmond;
   }
   #signin {
-    width: 150px;
-    height: 30px;
+    width: 38%;
+    padding: 2%;
     background-color: blanchedalmond;
+  }
+  #SIGNUP:hover{
+    cursor: pointer;
+    color: black;
+    background-color: rgb(254, 223, 177);
+}
+#SIGNUP,#SIGNIN{
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 26px;
+}
+  #SIGNIN:hover{
+    cursor: pointer;
+    color: black;
+    background-color: rgb(254, 223, 177);
   }
   form {
     width: 80%;
@@ -45,11 +69,11 @@
     display: flex;
     flex-direction: column;
   }
-  form > input,
-  select {
+  form > input, select {
     margin-top: 30px;
-    height: 40px;
+    padding: 3%;
     background-color: white;
+    border: 1px solid black;
   }
   #link {
     width: 50%;
@@ -58,3 +82,9 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media only screen and (max-width: 900px) {
+    #container{
+      width: 70%;
+    }
+}

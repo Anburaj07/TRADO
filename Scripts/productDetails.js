@@ -102,3 +102,4 @@ if (LSdata === null) {
 let n = LSdata.length - 1;
 h2.innerText = LSdata[n].name;
 navbar.append(h2);
+
