@@ -141,6 +141,9 @@ a:hover{
     #navbar{
         justify-content:space-between;
     }
+    #cartLogo{
+        display: none;
+      }
     #bot3{
         display: flex;
         flex-direction: column;

@@ -1,16 +1,8 @@
 
-let country = document.getElementById("country");
-let countryShow = document.getElementById("countryShow");
-countryShow.innerText = country.value;
-let delivery = document.getElementById("delivery");
-
-delivery.addEventListener("click", function () {
-  alert("Details Saved successfully !!");
-});
-let debit = document.getElementById("debit");
-debit.addEventListener("click", function () {
-  debit.style.backgroundColor = "#2d2d2d";
-  debit.style.color = "white";
+let form = document.querySelector('form')
+form.addEventListener("submit", function(e) {
+  e.preventDefault()
+  alert("Details Saved successfully");
 });
 let buy = document.getElementById("buy");
 buy.addEventListener("click", function () {
@@ -61,9 +53,9 @@ function display(data) {
   });
 
   let R1 = document.getElementById("R1");
-  let totalItems = document.createElement("h1");
+  let totalItems = document.createElement("h2");
   totalItems.className = "totalItems";
-  let Items = document.createElement("h1");
+  let Items = document.createElement("h2");
 
   totalItems.innerText = `${LSData.length}`;
   Items.innerText = "ITEMS";

@@ -11,7 +11,7 @@
     <div class="navbar">
       <h2 id="logo">TRADO</h2>
       <h2>CHECKOUT</h2>
-      <div><img src="./images/Digicart.PNG" alt="error" /></div>
+      <div id="image"><img src="./images/Digicart.PNG" alt="error" /></div>
     </div>
     <div id="container">
       <div class="left">
@@ -26,71 +26,41 @@
             <option value="Maldives">Maldives</option>
           </select>
         </div>
-        <div class="L2">
-          <select name="" id="promo">
-            <option value="">PROMO / STUDENT CODE OR VOUCHERS</option>
-          </select>
-        </div>
         <div class="L3">
           <h2>EMAIL ADDRESS</h2>
-          <input placeholder="Enter your e-mail here" type="email" />
+          <input placeholder="Enter your e-mail here" type="email" required/>
         </div>
         <div class="L4">
-          <h2>DELIVERY ADDRESS</h2>
-          <h3>ADD ADDRESS</h3>
-          <p>FIRST NAME :</p>
-          <input type="text" />
-          <p>LAST NAME :</p>
-          <input type="text" />
-          <p>MOBILE: <span>(For delivery updates:)</span></p>
-          <input type="text" />
-          <p>ADDRESS :</p>
-          <input type="text" />
-          <input type="text" placeholder="Optional" />
-          <p>CITY :</p>
-          <input type="text" />
-          <p>COUNTRY :</p>
-          <input type="text" placeholder="Optional" />
-          <p>POSTCODE :</p>
-          <input id="post" type="text" />
-          <p>Country</p>
-          <p id="countryShow"></p>
-          <button id="delivery">DELIVER TO THIS ADDRESS</button>
+          <form action="">
+            <h2>DELIVERY ADDRESS</h2>
+            <p>FIRST NAME :</p>
+            <input type="text" required/>
+            <p>LAST NAME :</p>
+            <input type="text" required/>
+            <p>MOBILE: </p>
+            <input type="number" required/>
+            <p>ADDRESS :</p>
+            <input type="text" required/>
+            <input type="text" placeholder="Optional" />
+            <p>CITY :</p>
+            <input type="text" required/>
+            <p>POSTCODE :</p>
+            <input id="post" type="text" />
+            <input type="submit" id="delivery" placeholder="DELIVER TO THIS ADDRESS"/>
+          </form>
         </div>
         <div class="L5">
           <h2>DELIVERY OPTIONS</h2>
           <div class="L5A">
-            <h2>$7.00</h2>
-            <div>
-              <img src="./images/standard.PNG" alt="error" />
-            </div>
-            <input type="radio" />
+            <p>$7.00</p>
+            <h3>Standard Delivery</h3>
+            <input type="radio" required/>
           </div>
           <div id="L5A" class="L5A">
-            <h2>$22.50</h2>
-            <div>
-              <img src="./images/expressDelivery.PNG" alt="error" />
-            </div>
-            <input type="radio" />
-          </div>
-          <div class="L6">
-            <h2>PAYMENT TYPE</h2>
-            <button id="debit">
-              <img
-                id="L6Img"
-                src="./images/addDebitCart.PNG"
-                alt="error"
-              />CREDIT/DEBIT CARD
-            </button>
-            <p>OR</p>
-            <button id="debit">
-              <img id="L6Img2" src="./images/paypal.PNG" alt="error" />PAYPAL
-            </button>
-          </div>
-          <div class="L7">
-            <p>WE ACCEPT:</p>
-            <img id="acceptImg" src="./images/weAccept.PNG" alt="error" />
-          </div>
+            <p>$22.50</p>
+            <h3>Express Delivery</h3>
+            <input type="radio" required/>
+          </div>          
         </div>
         <div>
           <button id="buy">BUY NOW</button>
@@ -114,7 +84,6 @@
             <h3 id="totalToPay"></h3>
           </div>
         </div>
-        <img src="./images/indiaDel.PNG" alt="error" />
       </div>
     </div>
     <div id="footer">

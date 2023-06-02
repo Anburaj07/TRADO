@@ -144,6 +144,9 @@ p {
   #navbar .a{
       display: none;
   }
+  #cartLogo{
+    display: none;
+  }
   #navbar{
       justify-content:space-between;
   }
