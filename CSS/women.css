@@ -30,6 +30,9 @@ a:hover{
     color: #2d2d2d;
     background-color: #eeeeee;
 }
+#cartLogo {
+    font-size: 40px;
+}
 #navbar2{
     width: 100%;
     display: flex;

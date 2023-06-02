@@ -36,6 +36,7 @@ function display(product) {
 
   product.forEach((el) => {
     let imgDiv = document.createElement("div");
+    imgDiv.className="imgDiv"
     let textDiv = document.createElement("div");
     let img = document.createElement("img");
     img.className = "Cimg";
@@ -45,6 +46,8 @@ function display(product) {
     let addToCart = document.createElement("button");
     addToCart.className = "addcart";
     let bag_below = document.createElement("img");
+    bag_below.className="Cimg";
+    bag_below.id="bag";
 
     img.src = el.img;
     brand.innerText = el.brand;

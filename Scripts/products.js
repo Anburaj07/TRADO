@@ -24,3 +24,11 @@ if (LSdata === null) {
 let n = LSdata.length - 1;
 h2.innerText = LSdata[n].name;
 navbar.append(h2);
+let women = document.getElementById("women");
+women.addEventListener("click", function () {
+  window.location.href = "women.html";
+});
+let men = document.getElementById("men");
+men.addEventListener("click", function () {
+  window.location.href = "products.html";
+});
