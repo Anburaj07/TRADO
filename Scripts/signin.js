@@ -15,7 +15,7 @@ let name = document.getElementById("name");
     }
 
     form.addEventListener("submit", function (e) {
-      // e.preventDefault();
+      e.preventDefault();
       if (
         name.value === "" ||
         email.value === "" ||
