@@ -64,7 +64,7 @@ The ASOS.com clone integrates with the  API to fetch real-time product data. The
 ⇥ [API LINK](https://jsonserver-drqy.onrender.com/puma)
 
 # Deployment
-The ASOS.com clone deployed on the netlify website. 
+The ASOS.com clone deployed on the Netlify website. 
 ⇥ [DEPLOYMENT LINK](https://647a0037bb188e11f328ebc9--subtle-phoenix-ecd1f2.netlify.app/home.html)
 
 # Screenshots
