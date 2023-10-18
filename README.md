@@ -1,5 +1,5 @@
-# ASOS.com Clone Documentation
-This documentation provides an overview of the ASOS.com clone project, which is built using HTML, CSS, JavaScript, and API integration. The ASOS.com clone aims to replicate the basic functionality and design of the original ASOS website, allowing users to browse and purchase fashion products online.
+# TRADO (ASOS.com Clone) Documentation
+This documentation provides an overview of the ASOS.com clone project, built using HTML, CSS, JavaScript, and API integration. TRADO aims to replicate the basic functionality and design of the original ASOS website, allowing users to browse and purchase fashion products online.
 
 # Table of Contents
 
@@ -18,7 +18,7 @@ This documentation provides an overview of the ASOS.com clone project, which is 
 >Screenshots
 
 # Project Overview
-The ASOS.com clone is a web application developed to mimic the functionality and appearance of the original ASOS website. It enables users to browse through a wide range of fashion products, view detailed product information, add items to their cart, and proceed with the checkout process.It renamed as **TRADO** for the convenience.
+TRADO is a web application developed to mimic the functionality and appearance of the original ASOS website. It enables users to browse a wide range of fashion products, view detailed product information, add items to their cart, and proceed with the checkout process. It was renamed as **TRADO** for convenience.
 
 The project utilizes HTML for the structure and layout of web pages, CSS for styling and visual presentation, and JavaScript for interactivity and dynamic functionality. Additionally, API integration is implemented to fetch real-time product data from the API.
 
@@ -43,7 +43,7 @@ Upon opening the home.html file, you will be presented with the ASOS.com clone w
 **.Checkout**: Proceed with the checkout process, providing necessary details such as shipping address and payment information.
 
 # Features
-The ASOS.com clone includes the following key features:
+TRADO includes the following key features:
 
 **.Product Listing:** Displaying a wide range of fashion products with relevant information, such as images, titles, and prices.
 
@@ -53,14 +53,14 @@ The ASOS.com clone includes the following key features:
 
 **.Product Sorting:** Sort functionality to find products based on price from low to high and high to low. 
 
-**.Product Details:** Detailed product information, including images, description and price.
+**.Product Details:** Detailed product information, including images, description, and price.
 
 **.Shopping Cart:** Add products to the cart, view the cart, update quantities, and remove items.
 
 **.Checkout:** A multi-step checkout process, including entering shipping details and payment information.
 
 # API Integration
-The ASOS.com clone integrates with the  API to fetch real-time product data. The API endpoints are accessed using JavaScript's **fetch()** function, and the retrieved data is dynamically rendered on the web pages.
+TRADO integrates with the  API to fetch real-time product data. The API endpoints are accessed using JavaScript's **fetch()** function, and the retrieved data is dynamically rendered on the web pages.
 ⇥ [API LINK](https://jsonserver-drqy.onrender.com/puma)
 
 # Deployment
